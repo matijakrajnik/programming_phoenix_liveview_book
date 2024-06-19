@@ -1,2 +1,2 @@
-# programming_phoenix_liveview_book
+# Programming Phoenix LiveView
 Practice exercises from Programming Phoenix LiveView book
