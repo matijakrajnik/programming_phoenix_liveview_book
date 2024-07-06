@@ -1,0 +1,14 @@
+<section class="row">
+  <h1 class="font-heavy text-3xl">Admin Dashboard</h1>
+</section>
+<.live_component
+  module={PentoWeb.Admin.SurveyResultsLive}
+  id={@survey_results_component_id} />
+<br/>
+<.live_component
+  module={PentoWeb.Admin.UserActivityLive},
+  id={@user_activity_component_id} />
+<br/>
+<.live_component
+  module={PentoWeb.Admin.SurveyTakersLive},
+  id={@survey_takers_component_id} />
