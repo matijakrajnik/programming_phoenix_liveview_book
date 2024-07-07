@@ -1,0 +1,7 @@
+<div class="user-activity-component ml-8">
+  <h2>Survey Takers</h2>
+  <p>Active users currently taking survey</p>
+  <ul>
+    <li :for={user_email <- assigns.survey_visitors}><%= user_email %> </li>
+  </ul>
+</div>

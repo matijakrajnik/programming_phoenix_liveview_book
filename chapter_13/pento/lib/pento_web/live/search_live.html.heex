@@ -1,0 +1,29 @@
+<.header>
+  Search
+  <:subtitle>Search products by SKU</:subtitle>
+</.header>
+
+<div>
+  <.simple_form
+    for={@form}
+    id="search"
+    phx-change="validate"
+    phx-submit="search"
+  >
+    
+    <.input field={@form[:sku]} type="text" label="Search by SKU" />
+    <:actions>
+      <.button phx-disable-with="Searching...">Search</.button>
+    </:actions>
+  </.simple_form>
+</div>
+
+<.table
+  id="searched-products"
+  rows={@searched_products}
+>
+  <:col :let={%Product{} = product} label="Name"><%= product.name %></:col>
+  <:col :let={%Product{} = product} label="Description"><%= product.description %></:col>
+  <:col :let={%Product{} = product} label="Unit price"><%= product.unit_price %></:col>
+  <:col :let={%Product{} = product} label="Sku"><%= product.sku %></:col>
+</.table>
